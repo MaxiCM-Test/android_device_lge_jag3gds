@@ -1,4 +1,4 @@
-android_device_lge_jagnm
+android_device_lge_jag3gds
 =============================
 
-MaxiCM LP Device Tree for LG G3 Beat (D722)
+MaxiCM LP Device Tree for LG G3 Beat (D724)

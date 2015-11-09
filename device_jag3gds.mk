@@ -20,20 +20,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Specific overlay
-DEVICE_PACKAGE_OVERLAYS += device/lge/jagnm/overlay
+DEVICE_PACKAGE_OVERLAYS += device/lge/jag3gds/overlay
 
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
-$(call inherit-product-if-exists, vendor/lge/jagnm/jagnm-vendor.mk)
+$(call inherit-product-if-exists, vendor/lge/jag3gds/jag3gds-vendor.mk)
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/lge/jagnm/rootdir,root)
+    $(call find-copy-subdir-files,*,device/lge/jag3gds/rootdir,root)
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/lge/jagnm/prebuilt/system,system)
+    $(call find-copy-subdir-files,*,device/lge/jag3gds/prebuilt/system,system)
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -99,13 +99,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libxml2 \
     com.android.future.usb.accessory
-
-# NFC packages
-PRODUCT_PACKAGES += \
-    NfcNci \
-    Tag \
-    nfc_nci.pn54x.default \
-    com.android.nfc_extras
 
 # Omx
 PRODUCT_PACKAGES += \

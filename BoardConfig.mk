@@ -21,10 +21,10 @@
 # definition file).
 #
 
-TARGET_SPECIFIC_HEADER_PATH += device/lge/jagnm/include
+TARGET_SPECIFIC_HEADER_PATH += device/lge/jag3gds/include
 
 #Ota assert devices 
-TARGET_OTA_ASSERT_DEVICE := jagnm,jagn
+TARGET_OTA_ASSERT_DEVICE := jag3gds,jagn
 
 # Platform
 TARGET_NO_BOOTLOADER := true
@@ -53,9 +53,9 @@ TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/jagnm/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/jag3gds/bluetooth
 BOARD_HAVE_BLUETOOTH := true
-BOARD_BLUEDROID_VENDOR_CONF := device/lge/jagnm/bluetooth/vnd_jagnm.txt
+BOARD_BLUEDROID_VENDOR_CONF := device/lge/jag3gds/bluetooth/vnd_jag3gds.txt
 #BOARD_HAVE_BLUETOOTH_QCOM := true
 #BLUETOOTH_HCI_USE_MCT := true
 
@@ -70,8 +70,8 @@ BOARD_USES_LEGACY_MMAP := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 #BOARD_CHARGER_SHOW_PERCENTAGE := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
-#BOARD_HEALTHD_CUSTOM_CHARGER := device/lge/jagnm/charger/healthd_mode_charger.cpp
-#BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/lge/jagnm/charger/images
+#BOARD_HEALTHD_CUSTOM_CHARGER := device/lge/jag3gds/charger/healthd_mode_charger.cpp
+#BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/lge/jag3gds/charger/images
 COMMON_GLOBAL_CFLAGS += \
     -DBOARD_CHARGING_CMDLINE_NAME='"androidboot.mode"' \
     -DBOARD_CHARGING_CMDLINE_VALUE='"chargerlogo"'
@@ -84,7 +84,7 @@ TARGET_USES_C2D_COMPOSITION := true
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 # Hardware tunables framework
-BOARD_HARDWARE_CLASS := device/lge/jagnm/cmhw/
+BOARD_HARDWARE_CLASS := device/lge/jag3gds/cmhw/
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -106,7 +106,7 @@ TARGET_POWERHAL_VARIANT := qcom
 BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/lge/jagnm/rootdir/fstab.jagnm
+TARGET_RECOVERY_FSTAB := device/lge/jag3gds/rootdir/fstab.jag3gds
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_HAS_NO_SELECT_BUTTON := true
 DEVICE_RESOLUTION := 720x1280
@@ -153,13 +153,13 @@ WIFI_DRIVER_FW_PATH_STA := "/system/etc/firmware/fw_bcmdhd.bin"
 
 # Kernel image
 BOARD_KERNEL_SEPARATED_DT := true
-BOARD_CUSTOM_BOOTIMG_MK := device/lge/jagnm/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/lge/jag3gds/mkbootimg.mk
 TARGET_KERNEL_SOURCE := kernel/lge/jagnm
-TARGET_KERNEL_CONFIG := maxi_jagnm_defconfig
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=jagnm user_debug=31 msm_rtb.filter=0x37 androidboot.selinux=permissive
+TARGET_KERNEL_CONFIG := maxi_jag3gds_defconfig
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=jag3gds user_debug=31 msm_rtb.filter=0x37 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 
 # inherit from the proprietary version
--include vendor/lge/jagnm/BoardConfigVendor.mk
+-include vendor/lge/jag3gds/BoardConfigVendor.mk
